@@ -1,3 +1,13 @@
+/*
+IMPORTANT NOTE:
+
+You cannot use arrow functions when you are using methods because
+they do not have their own bindings (this, arguments, super. they
+are not suitable for call, apply, or bind) and can not be used in
+constructors.
+*/
+
+
 /* Some */
 const myArray = [97, 14, 22, 19, 65];
 
