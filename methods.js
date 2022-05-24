@@ -53,4 +53,4 @@ Array.prototype.myFilter = function(cb) {
   return res;
 }
 
-console.log(strArr.myFilter(el => el.length < 7)); // [ 'love', 'hippie' ]
+// console.log(strArr.myFilter(el => el.length < 7)); // [ 'love', 'hippie' ]
