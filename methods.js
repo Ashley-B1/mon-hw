@@ -1,3 +1,4 @@
+/* Some */
 const myArray = [97, 14, 22, 19, 65];
 
 const isOdd = num => num % 2 !== 0;
@@ -16,7 +17,7 @@ Array.prototype.mySome = function(cb) {
 
 // console.log(myArray.mySome(isOdd)); // true
 
-
+/* Reduce */
 // Original Array.prototype.reduce():
 // const initVal = 0;
 // console.log(myArray.reduce((prev, curr) => prev + curr, initVal)); // 217
@@ -37,3 +38,19 @@ Array.prototype.myReduce = function(initVal, cb) {
 // console.log(smolArr.myReduce(5, (accum, num) => {
 //   return accum * num;
 // })); // 30
+
+/* Filter */
+// Original Array.prototype.filter():
+const strArr = ['natural', 'manifest', 'love', 'recycle', 'hippie'];
+// console.log(strArr.filter(str => str.endsWith('e'))); // [ 'love', 'recycle', 'hippie' ]
+
+Array.prototype.myFilter = function(cb) {
+  const res = [];
+  for (let i = 0; i < this.length; i++) {
+    let el = this[i];
+    if (cb(el)) res.push(el);
+  }
+  return res;
+}
+
+console.log(strArr.myFilter(el => el.length < 7)); // [ 'love', 'hippie' ]
